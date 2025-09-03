@@ -1,9 +1,9 @@
-import type React from 'react';
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import { Suspense } from 'react';
 import './globals.css';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
     title: 'Alisson Luan de Lima Peloso - Full-Stack Developer & Tech Lead',
@@ -17,9 +17,9 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en" className="dark">
+        <html lang="en" className="scroll-smooth" suppressHydrationWarning>
         <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
+        <Suspense fallback={null}> <ThemeProvider attribute="class">{children}</ThemeProvider> </Suspense>
         </body>
         </html>
     );

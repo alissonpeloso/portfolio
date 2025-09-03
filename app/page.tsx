@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Mail, Phone, MapPin, Linkedin, ExternalLink, Github, Download } from 'lucide-react';
 import { Avatar } from '@/components/ui/avatar';
+import { ThemeChanger } from '@/components/ui/theme-changer';
 
 export default function Portfolio() {
     const experienceTime = new Date().getFullYear() - 2021;
@@ -34,6 +35,8 @@ export default function Portfolio() {
                                     <Download className="w-4 h-4"/> Resume PDF
                                 </a>
                             </Button>
+
+                            <ThemeChanger/>
                         </div>
                     </nav>
                 </div>
