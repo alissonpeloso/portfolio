@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Mail, Phone, MapPin, Linkedin, ExternalLink, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, ExternalLink, Github, Download } from 'lucide-react';
 import { Avatar } from '@/components/ui/avatar';
 
 export default function Portfolio() {
@@ -28,6 +28,12 @@ export default function Portfolio() {
                             <a href="#contact" className="nav-link text-muted-foreground hover:text-primary">
                                 Contact
                             </a>
+
+                            <Button variant="outline" size="sm" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:bg-secondary hover:text-primary" asChild>
+                                <a href="/curriculum.pdf" download className="flex items-center gap-2">
+                                    <Download className="w-4 h-4"/> Resume PDF
+                                </a>
+                            </Button>
                         </div>
                     </nav>
                 </div>
