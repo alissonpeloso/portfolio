@@ -7,10 +7,7 @@ import { Moon, Sun } from 'lucide-react';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
-export function ThemeChanger({
-    className,
-    ...props
-}: React.ComponentProps<typeof Button>) {
+export function ThemeChanger({}: React.ComponentProps<typeof Button>) {
     const [mounted, setMounted] = useState(false);
     const { theme, setTheme } = useTheme();
 
