@@ -31,7 +31,7 @@ export default function Portfolio() {
                             </a>
 
                             <Button variant="outline" size="sm" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:bg-secondary hover:text-primary" asChild>
-                                <a href="/curriculum.pdf" download className="flex items-center gap-2">
+                                <a href="./curriculum.pdf" download className="flex items-center gap-2">
                                     <Download className="w-4 h-4"/> Resume PDF
                                 </a>
                             </Button>
@@ -47,7 +47,7 @@ export default function Portfolio() {
                 <div className="container mx-auto px-4 text-center">
                     {/*Avatar*/}
                     <Avatar className="mx-auto mb-8 w-36 h-36 rounded-full border-4 border-primary glow-effect scale-on-hover">
-                        <img src="/avatar.png" alt="Avatar" className="w-full h-full object-cover rounded-full"/>
+                        <img src="./avatar.png" alt="Avatar" className="w-full h-full object-cover rounded-full"/>
                     </Avatar>
 
                     <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance slide-up">
