@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Mail, Phone, MapPin, Linkedin, ExternalLink, Github, Download } from 'lucide-react';
 import { Avatar } from '@/components/ui/avatar';
@@ -16,25 +16,29 @@ export default function Portfolio() {
                 <div className="container mx-auto px-4 py-4">
                     <nav className="flex items-center justify-between">
                         <h1 className="text-xl font-semibold text-foreground fade-in">Alisson Luan de Lima Peloso</h1>
-                        <div className="hidden md:flex space-x-8">
-                            <a href="#about" className="nav-link text-muted-foreground hover:text-primary">
-                                About
-                            </a>
-                            <a href="#experience" className="nav-link text-muted-foreground hover:text-primary">
-                                Experience
-                            </a>
-                            <a href="#skills" className="nav-link text-muted-foreground hover:text-primary">
-                                Skills
-                            </a>
-                            <a href="#contact" className="nav-link text-muted-foreground hover:text-primary">
-                                Contact
-                            </a>
-
-                            <Button variant="outline" size="sm" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:bg-secondary hover:text-primary" asChild>
-                                <a href="./curriculum.pdf" download className="flex items-center gap-2">
-                                    <Download className="w-4 h-4"/> Resume PDF
+                        <div className="space-x-8 flex">
+                            <div className="hidden md:flex space-x-8">
+                                <a href="#about" className="nav-link text-muted-foreground hover:text-primary">
+                                    About
                                 </a>
-                            </Button>
+                                <a href="#experience" className="nav-link text-muted-foreground hover:text-primary">
+                                    Experience
+                                </a>
+                                <a href="#skills" className="nav-link text-muted-foreground hover:text-primary">
+                                    Skills
+                                </a>
+                                <a href="#contact" className="nav-link text-muted-foreground hover:text-primary">
+                                    Contact
+                                </a>
+
+                                <Button variant="outline" size="sm" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:bg-secondary hover:text-primary cursor-pointer hidden lg:inline-flex">
+                                    <a href="./curriculum.pdf" download>
+                                        <span className="flex items-center gap-2">
+                                            <Download className="w-4 h-4"/> Resume PDF
+                                        </span>
+                                    </a>
+                                </Button>
+                            </div>
 
                             <ThemeChanger/>
                         </div>
@@ -58,14 +62,20 @@ export default function Portfolio() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in">
                         <Button size="lg" className="bg-primary hover:bg-primary/90 glow-effect scale-on-hover cursor-pointer">
-                            <a href="#contact" className="flex items-center gap-2">
+                            <a href="#contact" className="inline-flex justify-center gap-2 w-full">
                                 Get In Touch <ExternalLink className="w-4 h-4"/>
                             </a>
                         </Button>
-
-                        <Button variant="outline" size="lg" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:text-primary cursor-pointer">
-                            <a href="#experience" className="flex items-center gap-2">
+                        <Button variant="outline" size="lg" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:text-primary cursor-pointer hover:bg-transparent">
+                            <a href="#experience" className="inline-flex justify-center gap-2 w-full">
                                 View Experience
+                            </a>
+                        </Button>
+                        <Button variant="outline" size="lg" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:bg-secondary hover:text-primary cursor-pointer lg:hidden hover:bg-transparent">
+                            <a href="./curriculum.pdf" download>
+                                <span className="flex items-center gap-2">
+                                    <Download className="w-4 h-4"/> Resume PDF
+                                </span>
                             </a>
                         </Button>
                     </div>
@@ -85,7 +95,7 @@ export default function Portfolio() {
                                 <p className="text-muted-foreground mb-6 leading-relaxed">
                                     My experience spans from developing comprehensive workspace platforms to implementing real-time features with WebSockets, managing multi-tenant architectures, and optimizing performance across cloud environments.
                                 </p>
-                                <div className="flex flex-wrap gap-4">
+                                <div className="flex flex-wrap gap-4 justify-center">
                                     <div className="flex items-center gap-2 text-muted-foreground">
                                         <MapPin className="w-4 h-4"/> <span>Chapecó, SC, Brazil</span>
                                     </div>
@@ -270,38 +280,38 @@ export default function Portfolio() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 fade-in">
                             <Button size="lg" className="bg-primary hover:bg-primary/90 glow-effect scale-on-hover cursor-pointer">
-                                <a href="mailto:alisson.luan2000@gmail.com" className="flex items-center gap-2">
+                                <a href="mailto:alisson.luan2000@gmail.com" className="inline-flex justify-center gap-2 w-full">
                                     <Mail className="w-4 h-4"/> Email Me
                                 </a>
                             </Button>
 
-                            <Button variant="outline" size="lg" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:text-primary cursor-pointer">
+                            <Button variant="outline" size="lg" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:text-primary cursor-pointer hover:bg-transparent">
                                 <a
                                     href="https://www.linkedin.com/in/alissonluanpeloso/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2"
+                                    className="inline-flex justify-center gap-2 w-full"
                                 >
                                     <Linkedin className="w-4 h-4"/> LinkedIn
                                 </a>
                             </Button>
 
-                            <Button variant="outline" size="lg" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:text-primary cursor-pointer">
+                            <Button variant="outline" size="lg" className="scale-on-hover border-primary/20 hover:border-primary/40 bg-transparent hover:text-primary cursor-pointer hover:bg-transparent">
                                 <a
                                     href="https://github.com/alissonpeloso"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2"
+                                    className="inline-flex justify-center gap-2 w-full"
                                 >
                                     <Github className="w-4 h-4"/> GitHub
                                 </a>
                             </Button>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center text-muted-foreground fade-in">
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 justify-center">
                                 <Mail className="w-4 h-4"/> <span>alisson.luan2000@gmail.com</span>
                             </div>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 justify-center">
                                 <Phone className="w-4 h-4"/> <span>+55 (49) 98431-6738</span>
                             </div>
                         </div>
