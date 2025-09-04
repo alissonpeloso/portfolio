@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     title: 'Alisson Luan de Lima Peloso - Full-Stack Developer & Tech Lead',
     description:
         'Computer Science graduate with 4+ years of full-stack development experience. Tech Lead specializing in PHP, Laravel, Vue, and cloud solutions.',
+    icons: {
+        icon: [
+            { url: '/favicon.svg', type: 'image/svg+xml' },
+            { url: '/favicon.ico', sizes: '32x32' },
+        ],
+        shortcut: '/favicon.ico',
+        apple: '/apple-touch-icon.png',
+    },
 };
 
 export default function RootLayout({
